@@ -11,7 +11,7 @@ const axios = require('axios').default;
 async function fetchPosts(params) {
   const { start = 0, limit = 10 } = params || {};
   const { data: posts } = await axios.get(
-    'https://jsonplaceholder.typicode.com/posts?limit',
+    'https://jsonplaceholder.typicode.com/posts',
     {
       params: {
         _start: start,
